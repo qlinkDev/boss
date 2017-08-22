@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<decorators defaultdir="/WEB-INF/views">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>/doc/*</pattern>
+		<pattern>/api-doc/*</pattern>
+	</excludes>	
+	<!-- 默认装饰页面, 在需要装饰的页面增加<meta name="decorator" content="default"/> -->
+	<decorator name="default" page="layouts/default.jsp" />
+	<decorator name="default_mb" page="mobile/layouts/default.jsp" />
+	
+	<!-- CMS基础主题装饰页面 -->
+	<decorator name="cms_default_basic" page="modules/cms/front/themes/basic/layouts/default.jsp" />
+	<decorator name="cms_default_zgxj_blue" page="modules/cms/front/themes/zgxj_blue/layouts/default.jsp" />
+	
+</decorators>

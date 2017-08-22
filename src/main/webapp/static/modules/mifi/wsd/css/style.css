@@ -1,0 +1,44 @@
+html,body{
+	width:100%;
+	height:100%;
+	font-family:"Microsoft YaHei";
+	font-size:14px;
+}
+.wrap{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	text-align: center;
+	max-width:640px;
+	background:url('../images/wsd_bg.jpg') no-repeat bottom;
+	background-size:cover;
+}
+.wrap p{
+	width:100%;
+	text-align: center;
+	padding-top:13%;
+}
+.wrap  h2{
+	color:#fff;
+	font-size:30px;
+	font-weight:normal;
+	margin-top:25px;
+}
+.wrap form{
+	padding-top:17%;
+}
+.wrap form input{
+	border:none;
+	height:40px;
+	width:80%;
+	margin-bottom:12px;
+	border-radius: 20px;
+	padding-left:6%;
+}
+.wrap form input[type='button']{
+	width:87%;
+	margin-top:3%;
+	background:rgba(22,139,217,0.6);
+	color:#fff;
+	font-size:16px;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"  
+    xmlns:tx="http://www.springframework.org/schema/tx"   
+    xmlns:task="http://www.springframework.org/schema/task"  
+    xsi:schemaLocation="  
+	http://www.springframework.org/schema/beans  
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+	http://www.springframework.org/schema/tx  
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+	http://www.springframework.org/schema/aop  
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
+	http://www.springframework.org/schema/task  
+	http://www.springframework.org/schema/task/spring-task-3.0.xsd"> 
+	 
+    <task:annotation-driven />
+   	<!-- mifi V2.0 -->
+    <!-- 卡监控信息 定时处理：每5分钟处理一次mifi_card_monitor新建状态的记录（发邮件和手机短信） -->
+   	<!--bean id="cardMonitor" class="com.uu.common.scheduled.CardMonitorScheduled"/-->
+    <!-- 卡预警 定时处理 ：每天凌晨1点执行一次，有效期卡到期预警、剩余流量小于等500M（参数配置）时预警  -->
+    <!-- <bean id="cardEarlyWarning" class="com.uu.common.scheduled.CardEarlyWarningScheduled"/> -->  
+    <!-- 消费记录生成CSV文件 定时处理：每个小时执行一次 -->
+    <!-- <bean id="createCsvFiles" class="com.uu.common.scheduled.ConsumeToCsvFilesScheduled"/> -->  
+    <!-- MIFI订单生成CSV文件 定时处理：每个小时执行一次 -->
+    <!-- <bean id="createMifiOrderCsvFiles" class="com.uu.common.scheduled.MifiOrderToCsvFilesScheduled"/> -->
+    <!-- 卡流量清零定时处理：每个小时执行一次，清除自定义流量清0的卡类型对应的卡 -->
+	<!-- <bean id="cardDataClearScheduled" class="com.uu.common.scheduled.CardDataClearScheduled"/> -->
+    <!-- 产品价格更新定时处理：每个小时执行一次，更新配置了新价格和更新时间的产品  -->
+	<!-- <bean id="changePriceScheduledScheduled" class="com.uu.common.scheduled.ChangePriceScheduled"/> -->
+    <!-- 设备状态监控 定时处理：每天凌晨2点执行一次 -->
+    <!-- <bean id="deviceMonitor" class="com.uu.common.scheduled.DeviceMonitorScheduled"/> -->
+    <!-- 设备状态统计 定时处理：每天凌晨3点执行一次，统计联网时长、所在国家、关机时间、流量、连接最大设备数等数据 -->
+    <!-- <bean id="deviceCount" class="com.uu.common.scheduled.DeviceCountScheduled"/> -->
+    <!-- 设备使用记录 定时处理：每天凌晨1点30分执行一次，统计所有设备前一天的使用记录，一台设备一个国家一天内算一次使用记录 -->
+    <!-- <bean id="deviceUsageRecordDays" class="com.uu.common.scheduled.DeviceUsageRecordDaysScheduled"/> --> 
+    <!-- 卡状态修改定时处理：每个小时执行一次，[keepGo卡状态6改为状态2][simNode中状态为3的卡，通过ueId，simbankId，simId这3个字段到mifiNode中去匹配，没匹配到的把状态改为2] -->
+    <!-- <bean id="simNodeStatusScheduled" class="com.uu.common.scheduled.SimNodeStatusScheduled"/> -->
+    <!-- 卡过期定时处理:每天凌晨0点执行一次，卡使用天数大于有效期修改卡状态为4 -->
+    <!-- <bean id="simNodeOverdueScheduled" class="com.uu.common.scheduled.SimNodeOverdueScheduled"/> -->
+    <!-- 完成订单 定时处理：每天凌晨过一刻执行一次，修改设备UEALLOWED=0,UEALLOWEDMCC='homeForbidden'，修改订单order_status=8,finish_time=NOW() -->
+   	<!-- <bean id="finishOrder" class="com.uu.common.scheduled.FinishOrderScheduled"/> -->
+    <!-- MIFI开机(一天一条MIFI状态为4记录),用户消费记录回调渠道商接口通知   定时处理 -->
+    <!-- <bean id="mifiBoot" class="com.uu.common.scheduled.MifiBootScheduled"/> -->
+    <!-- 卡箱与服务器连接失败(取一个小时前到半个小时前时间段内，卡箱与服务器断开连接的最新的一条监控记录,如果没有找到对应的卡箱与服务器连接成功记录，则添加一条卡箱与服务器连接失败的监控记录)  定时处理 -->
+    <!-- <bean id="simBankConnectFailScheduled" class="com.uu.common.scheduled.SimBankConnectFailScheduled"/> -->
+    <!-- 开始订单 定时处理 -->
+   	<!-- <bean id="startOrder" class="com.uu.common.scheduled.StartOrderScheduled"/> -->
+   	
+   	<!-- mifi V3.0 -->
+	<!-- <bean id="deviceUsageRecordSegmentedScheduled" class="com.uu.common.scheduled.DeviceUsageRecordSegmentedScheduled"/> -->
+</beans> 

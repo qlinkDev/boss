@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,meter,nav,object,ol,output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp{border:0;margin:0;padding:0;box-sizing: border-box;}
+html{
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing:antialiased;
+    font-size:62.5%;
+}
+img{
+    display:inline-block;
+    border:medium none;
+    vertical-align:middle;
+    max-width: 100%;    
+}
+a{
+    text-decoration:none;
+}
+a:focus {
+    outline: thin dotted;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:400;
+}
+ul,li,ol{
+    list-style: none outside none;
+}
+.clearfix:before, .clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+    overflow:hidden;
+}
+.clearfix{
+    zoom:1;
+}
+button,input,select,textarea{
+    font-size:100%;
+    margin: 0;
+    outline: 0 none;
+    vertical-align: baseline;
+}
+textarea{
+    overflow: auto;
+    vertical-align: top;
+    resize:none;
+}
+button,input{
+    line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]
+{
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled],
+input[disabled],
+.disable{
+    cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"],
+.form-radio,
+.form-checkbox{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+legend{
+    border: 0;
+    padding: 0;
+    white-space: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner{
+    border: 0;
+    padding: 0;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{
+    display: block;
+}
+audio,canvas,video{
+    display: inline-block;
+}
+audio:not([controls]){
+    display: none;
+    height: 0;
+}
+input[type="search"]{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.content{ max-width:640px; margin:0 auto; }
+
+/*消息提醒*/
+#message{position:absolute;top:40%;left:0;margin:0 20%;width:60%;text-align:center;display:none;background:#333;box-sizing:border-box;
+opacity:0.9;z-index:2000;border-radius:1rem;color:white;font-size:1.4rem;padding:1rem;}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>公司介绍</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui">
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="mask none" id="mask">
+				<div class="maskcon">
+					<p class="masktext"><img src="css/img/right.png" width="26" alt="" class="mr10"/>联网成功</p>
+					<p class="maskbtn">确定</p>
+				</div>
+			</div>
+			<div class="incont">
+				<div class="topimg"><img src="css/img/img1.jpg" alt="" /></div>
+				<div class="button"><span id="intbtn">我要上网</span></div>
+				<div class="bottomimg"><img src="css/img/img2.jpg/" alt="" /></div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+//		$('.topimg img').attr('src',config.topimgUrl);
+//		$('.bottomimg img').attr('src',config.bottomimgUrl);
+		$("#intbtn").click(function(){
+		  $('.mask').fadeIn();
+		});
+		$('.maskbtn').click(function(){
+			location.href = '/yyjie/content.html';
+		})
+	})
+</script>

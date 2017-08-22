@@ -1,0 +1,6 @@
+var config={
+  "bgimagesUrl":'css/img/banner.jpg',//背景图片
+  "topimgUrl":'css/img/img1.jpg',
+  "bottomimgUrl":'css/img/img2.jpg',
+  "contentimgUrl":'css/img/content.jpg'
+}
