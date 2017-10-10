@@ -1,6 +1,6 @@
-package main.java.com.qlink.common.filter;
+package com.qlink.common.filter;
 
-import com.uu.common.utils.CacheUtils;
+import com.qlink.common.utils.CacheUtils;
 
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter;
