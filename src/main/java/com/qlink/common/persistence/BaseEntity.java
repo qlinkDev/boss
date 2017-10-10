@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -13,8 +13,8 @@ import javax.xml.bind.annotation.XmlTransient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Maps;
-import com.uu.modules.sys.entity.User;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.modules.sys.entity.User;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * Entity支持类

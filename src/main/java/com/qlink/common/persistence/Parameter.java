@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.util.HashMap;
 

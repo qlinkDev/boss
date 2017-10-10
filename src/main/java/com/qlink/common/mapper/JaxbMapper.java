@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.mapper;
+package com.qlink.common.mapper;
 
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -22,9 +22,9 @@ import javax.xml.namespace.QName;
 import org.springframework.http.converter.HttpMessageConversionException;
 import org.springframework.util.Assert;
 
-import com.uu.common.utils.Exceptions;
-import com.uu.common.utils.Reflections;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.Exceptions;
+import com.qlink.common.utils.Reflections;
+import com.qlink.common.utils.StringUtils;
 
 /**
  * 使用Jaxb2.0实现XML<->Java Object的Mapper.

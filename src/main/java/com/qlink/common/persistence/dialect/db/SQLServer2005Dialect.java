@@ -2,11 +2,11 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.dialect.db;
+package com.qlink.common.persistence.dialect.db;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.uu.common.persistence.dialect.Dialect;
+import com.qlink.common.persistence.dialect.Dialect;
 
 /**
  * Sql 2005的方言实现

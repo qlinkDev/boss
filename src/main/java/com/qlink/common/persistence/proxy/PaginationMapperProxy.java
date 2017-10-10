@@ -2,14 +2,14 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.proxy;
+package com.qlink.common.persistence.proxy;
 
 import org.apache.ibatis.binding.BindingException;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.session.SqlSession;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.Reflections;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.Reflections;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

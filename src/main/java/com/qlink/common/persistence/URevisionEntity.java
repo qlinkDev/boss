@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.util.Date;
 

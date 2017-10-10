@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.dialect;
+package com.qlink.common.persistence.dialect;
 
 /**
  * 类似hibernate的Dialect,但只精简出分页部分

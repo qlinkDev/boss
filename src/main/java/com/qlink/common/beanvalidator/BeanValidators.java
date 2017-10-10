@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.beanvalidator;
+package com.qlink.common.beanvalidator;
 
 import java.util.List;
 import java.util.Map;

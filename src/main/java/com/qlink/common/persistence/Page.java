@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.uu.common.config.Global;
-import com.uu.common.utils.CookieUtils;
+import com.qlink.common.config.Global;
+import com.qlink.common.utils.CookieUtils;
 
 /**
  * 分页类

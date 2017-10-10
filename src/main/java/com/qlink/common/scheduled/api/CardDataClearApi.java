@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.scheduled.api;
+package com.qlink.common.scheduled.api;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,13 +22,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.uu.common.scheduled.CardDataClearScheduled;
-import com.uu.common.utils.Socekt;
-import com.uu.modules.mifi.entity.CardBasicInfo;
-import com.uu.modules.mifi.entity.SimCardType;
-import com.uu.modules.mifi.service.CardManageService;
-import com.uu.modules.mifi.service.SimCardTypeService;
-import com.uu.modules.sys.service.LogService;
+import com.qlink.common.scheduled.CardDataClearScheduled;
+import com.qlink.common.utils.Socekt;
+import com.qlink.modules.mifi.entity.CardBasicInfo;
+import com.qlink.modules.mifi.entity.SimCardType;
+import com.qlink.modules.mifi.service.CardManageService;
+import com.qlink.modules.mifi.service.SimCardTypeService;
+import com.qlink.modules.sys.service.LogService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

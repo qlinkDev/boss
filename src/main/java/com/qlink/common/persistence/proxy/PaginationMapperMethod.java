@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.proxy;
+package com.qlink.common.persistence.proxy;
 
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.binding.BindingException;
@@ -12,7 +12,7 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 
-import com.uu.common.persistence.Page;
+import com.qlink.common.persistence.Page;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

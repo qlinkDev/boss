@@ -2,9 +2,9 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.dialect.db;
+package com.qlink.common.persistence.dialect.db;
 
-import com.uu.common.persistence.dialect.Dialect;
+import com.qlink.common.persistence.dialect.Dialect;
 
 /**
  * Sybase数据库分页方言实现。

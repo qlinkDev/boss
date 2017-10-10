@@ -2,25 +2,25 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.interceptor;
+package com.qlink.common.persistence.interceptor;
 
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
 import org.apache.ibatis.plugin.Interceptor;
 
-import com.uu.common.config.Global;
-import com.uu.common.persistence.Page;
-import com.uu.common.persistence.dialect.Dialect;
-import com.uu.common.persistence.dialect.db.DB2Dialect;
-import com.uu.common.persistence.dialect.db.DerbyDialect;
-import com.uu.common.persistence.dialect.db.H2Dialect;
-import com.uu.common.persistence.dialect.db.HSQLDialect;
-import com.uu.common.persistence.dialect.db.MySQLDialect;
-import com.uu.common.persistence.dialect.db.OracleDialect;
-import com.uu.common.persistence.dialect.db.PostgreSQLDialect;
-import com.uu.common.persistence.dialect.db.SQLServer2005Dialect;
-import com.uu.common.persistence.dialect.db.SybaseDialect;
-import com.uu.common.utils.Reflections;
+import com.qlink.common.config.Global;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.persistence.dialect.Dialect;
+import com.qlink.common.persistence.dialect.db.DB2Dialect;
+import com.qlink.common.persistence.dialect.db.DerbyDialect;
+import com.qlink.common.persistence.dialect.db.H2Dialect;
+import com.qlink.common.persistence.dialect.db.HSQLDialect;
+import com.qlink.common.persistence.dialect.db.MySQLDialect;
+import com.qlink.common.persistence.dialect.db.OracleDialect;
+import com.qlink.common.persistence.dialect.db.PostgreSQLDialect;
+import com.qlink.common.persistence.dialect.db.SQLServer2005Dialect;
+import com.qlink.common.persistence.dialect.db.SybaseDialect;
+import com.qlink.common.utils.Reflections;
 
 import java.io.Serializable;
 import java.util.Properties;

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.interceptor;
+package com.qlink.common.persistence.interceptor;
 
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
@@ -15,8 +15,8 @@ import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.StringUtils;
 
 import java.util.Properties;
 

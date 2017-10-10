@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.interceptor;
+package com.qlink.common.persistence.interceptor;
 
 import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.executor.ExecutorException;
@@ -18,9 +18,9 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.persistence.dialect.Dialect;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.persistence.dialect.Dialect;
+import com.qlink.common.utils.StringUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.proxy;
+package com.qlink.common.persistence.proxy;
 
 import org.apache.ibatis.binding.BindingException;
 import org.apache.ibatis.binding.MapperRegistry;

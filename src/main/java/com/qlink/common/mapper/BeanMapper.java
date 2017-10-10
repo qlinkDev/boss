@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.mapper;
+package com.qlink.common.mapper;
 
 import java.util.Collection;
 import java.util.List;

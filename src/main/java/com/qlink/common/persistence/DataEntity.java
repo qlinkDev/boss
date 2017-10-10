@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -29,9 +29,9 @@ import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.sys.entity.User;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.sys.entity.User;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 数据Entity类

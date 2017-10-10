@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 
-import com.uu.common.utils.IdGen;
+import com.qlink.common.utils.IdGen;
 
 /**
  * 数据Entity类

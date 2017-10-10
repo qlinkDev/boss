@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence.interceptor;
+package com.qlink.common.persistence.interceptor;
 
 import org.apache.ibatis.executor.statement.BaseStatementHandler;
 import org.apache.ibatis.executor.statement.RoutingStatementHandler;
@@ -14,8 +14,8 @@ import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.Reflections;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.Reflections;
 
 import java.sql.Connection;
 import java.util.Properties;

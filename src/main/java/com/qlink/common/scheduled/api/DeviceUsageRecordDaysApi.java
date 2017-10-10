@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.scheduled.api;
+package com.qlink.common.scheduled.api;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;

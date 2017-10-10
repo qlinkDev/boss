@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.persistence;
+package com.qlink.common.persistence;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -57,8 +57,8 @@ import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
-import com.uu.common.utils.Reflections;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.Reflections;
+import com.qlink.common.utils.StringUtils;
 
 /**
  * DAO支持类实现

@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.log;
+package com.qlink.common.log;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;

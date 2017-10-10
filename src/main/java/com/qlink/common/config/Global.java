@@ -2,14 +2,14 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.config;
+package com.qlink.common.config;
 
 import java.util.Map;
 
 import org.springframework.util.Assert;
 
 import com.google.common.collect.Maps;
-import com.uu.common.utils.PropertiesLoader;
+import com.qlink.common.utils.PropertiesLoader;
 
 /**
  * 全局配置类
