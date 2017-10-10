@@ -1,7 +1,7 @@
 pragma solidity ^0.4.13;
 
 /* 定义合约拥有者 */
-contract Owned {
+contract owned {
 	
     /* 合约拥有者地址 */
     address public owner;
@@ -21,12 +21,12 @@ contract Owned {
     }
 }
 
-contract TokenRecipient { 
+contract tokenRecipient { 
 	function receiveApproval(address from, uint256 value, address token, bytes extraData); 
 }
 
 /* 基本合约 */
-contract Token { 
+contract token { 
 	
 	string public name; 				// 合约名称
 	string public symbol; 				// 合约三个字母的别名
@@ -114,7 +114,6 @@ contract Token {
 	/// @notice 从指定地址上减少代币发行的总量
 	/// @param _from 指定的地址
 	/// @param _value 减少代币的数量
-	/// @returns 成功或失败
 	function burnFrom(address _from, uint256 _value) returns (bool success) {
 		require(balanceOf[_from] >= _value);                // 检查目标地址余额是否足够
 		require(_value <= allowance[_from][msg.sender]);    // Check allowance
@@ -137,7 +136,12 @@ contract MyAdvancedToken is owned, token {
 	event FrozenFunds(address target, bool frozen);
 
 	/* Initializes contract with initial supply tokens to the creator of the contract */
-	function MyAdvancedToken(uint256 initialSupply,string tokenName,uint8 decimalUnits,string tokenSymbol) token (initialSupply, tokenName, decimalUnits, tokenSymbol) {}
+  	function MyAdvancedToken(
+      	uint256 initialSupply,
+      	string tokenName,
+      	uint8 decimalUnits,
+     	string tokenSymbol
+	) token (initialSupply, tokenName, decimalUnits, tokenSymbol) {}
 
 	/* Internal transfer, only can be called by this contract */
 	function _transfer(address _from, address _to, uint _value) internal {
