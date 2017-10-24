@@ -5,7 +5,7 @@
  * @date 2016年5月18日 上午9:32:14
  * @version V1.0 
  */
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.util.List;
 import java.util.Map;
@@ -18,14 +18,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.MailBody;
-import com.uu.common.utils.mail.MailThread;
-import com.uu.modules.mifi.service.CardManageService;
-import com.uu.modules.sys.condition.NoticeReceiveCondition;
-import com.uu.modules.sys.entity.NoticeReceive;
-import com.uu.modules.sys.service.NoticeReceiveService;
-import com.uu.modules.sys.utils.DictUtils;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.MailBody;
+import com.qlink.common.utils.mail.MailThread;
+import com.qlink.modules.mifi.service.CardManageService;
+import com.qlink.modules.sys.condition.NoticeReceiveCondition;
+import com.qlink.modules.sys.entity.NoticeReceive;
+import com.qlink.modules.sys.service.NoticeReceiveService;
+import com.qlink.modules.sys.utils.DictUtils;
+import com.qlink.modules.utils.Constants;
 
 /**
  * 

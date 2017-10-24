@@ -2,17 +2,17 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel.fieldtype;
+package com.qlink.common.utils.excel.fieldtype;
 
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Lists;
-import com.uu.common.utils.Collections3;
-import com.uu.common.utils.SpringContextHolder;
-import com.uu.modules.sys.entity.Role;
-import com.uu.modules.sys.service.SystemService;
+import com.qlink.common.utils.Collections3;
+import com.qlink.common.utils.SpringContextHolder;
+import com.qlink.modules.sys.entity.Role;
+import com.qlink.modules.sys.service.SystemService;
 
 /**
  * 字段类型转换

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel.annotation;
+package com.qlink.common.utils.excel.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -5,7 +5,7 @@
  * @date 2016年4月15日 下午2:11:29 
  * @version V1.0 
  */
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,17 +19,17 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.MailBody;
-import com.uu.common.utils.mail.MailThread;
-import com.uu.common.utils.phone.PhoneMessageBody;
-import com.uu.common.utils.phone.PhoneMessageThread;
-import com.uu.modules.mifi.condition.CardMonitorCondition;
-import com.uu.modules.mifi.entity.CardMonitor;
-import com.uu.modules.mifi.service.CardMonitorService;
-import com.uu.modules.sys.condition.NoticeReceiveCondition;
-import com.uu.modules.sys.entity.NoticeReceive;
-import com.uu.modules.sys.service.NoticeReceiveService;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.MailBody;
+import com.qlink.common.utils.mail.MailThread;
+import com.qlink.common.utils.phone.PhoneMessageBody;
+import com.qlink.common.utils.phone.PhoneMessageThread;
+import com.qlink.modules.mifi.condition.CardMonitorCondition;
+import com.qlink.modules.mifi.entity.CardMonitor;
+import com.qlink.modules.mifi.service.CardMonitorService;
+import com.qlink.modules.sys.condition.NoticeReceiveCondition;
+import com.qlink.modules.sys.entity.NoticeReceive;
+import com.qlink.modules.sys.service.NoticeReceiveService;
+import com.qlink.modules.utils.Constants;
 
 /**
  * @Description 卡监控信息 定时处理

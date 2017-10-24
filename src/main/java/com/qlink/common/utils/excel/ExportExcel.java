@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel;
+package com.qlink.common.utils.excel;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -37,10 +37,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
-import com.uu.common.utils.Encodes;
-import com.uu.common.utils.Reflections;
-import com.uu.common.utils.excel.annotation.ExcelField;
-import com.uu.modules.sys.utils.DictUtils;
+import com.qlink.common.utils.Encodes;
+import com.qlink.common.utils.Reflections;
+import com.qlink.common.utils.excel.annotation.ExcelField;
+import com.qlink.modules.sys.utils.DictUtils;
 
 /**
  * 导出Excel文件（导出“XLSX”格式，支持大数据量导出 @see org.apache.poi.ss.SpreadsheetVersion）

@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.security.shiro;
+package com.qlink.common.security.shiro;
 
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.tags.PermissionTag;

@@ -5,7 +5,7 @@
  * @date 2017年1月12日 上午11:48:16 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -21,9 +21,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.IdGen;
-import com.uu.modules.mifi.entity.CardMonitor;
-import com.uu.modules.mifi.service.CardMonitorService;
+import com.qlink.common.utils.IdGen;
+import com.qlink.modules.mifi.entity.CardMonitor;
+import com.qlink.modules.mifi.service.CardMonitorService;
 
 /** 
  * @Description 卡箱与服务器连接失败  定时处理

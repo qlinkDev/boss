@@ -5,7 +5,7 @@
  * @date 2016年5月20日 下午2:12:02 
  * @version V1.0 
  */
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -15,9 +15,9 @@ import java.util.Map;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.uu.common.utils.DigestUtils;
-import com.uu.modules.sys.security.api.StatelessAuthcFilter;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.DigestUtils;
+import com.qlink.modules.sys.security.api.StatelessAuthcFilter;
+import com.qlink.modules.utils.Constants;
 
 import jodd.http.HttpRequest;
 import jodd.http.HttpResponse;

@@ -5,7 +5,7 @@
  * @date 2017年3月2日 下午3:50:11 
  * @version V1.0 
  */
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -25,20 +25,20 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.mifi.entity.MifiUsageRecordSegment;
-import com.uu.modules.mifi.entity.MifiUsageRecordSegmentLog;
-import com.uu.modules.mifi.service.CardMonitorService;
-import com.uu.modules.mifi.service.MifiManageService;
-import com.uu.modules.mifi.service.MifiTrafficService;
-import com.uu.modules.mifi.service.MifiUsageRecordSegmentLogService;
-import com.uu.modules.mifi.service.MifiUsageRecordSegmentService;
-import com.uu.modules.om.entity.Channel;
-import com.uu.modules.om.service.ChannelService;
-import com.uu.modules.om.service.PriceService;
-import com.uu.modules.sys.entity.Dict;
-import com.uu.modules.sys.utils.DictUtils;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.mifi.entity.MifiUsageRecordSegment;
+import com.qlink.modules.mifi.entity.MifiUsageRecordSegmentLog;
+import com.qlink.modules.mifi.service.CardMonitorService;
+import com.qlink.modules.mifi.service.MifiManageService;
+import com.qlink.modules.mifi.service.MifiTrafficService;
+import com.qlink.modules.mifi.service.MifiUsageRecordSegmentLogService;
+import com.qlink.modules.mifi.service.MifiUsageRecordSegmentService;
+import com.qlink.modules.om.entity.Channel;
+import com.qlink.modules.om.service.ChannelService;
+import com.qlink.modules.om.service.PriceService;
+import com.qlink.modules.sys.entity.Dict;
+import com.qlink.modules.sys.utils.DictUtils;
+import com.qlink.modules.utils.Constants;
 
 /** 
  * @Description 

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel;
+package com.qlink.common.utils.excel;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -29,9 +29,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.google.common.collect.Lists;
-import com.uu.common.utils.Reflections;
-import com.uu.common.utils.excel.annotation.ExcelField;
-import com.uu.modules.sys.utils.DictUtils;
+import com.qlink.common.utils.Reflections;
+import com.qlink.common.utils.excel.annotation.ExcelField;
+import com.qlink.modules.sys.utils.DictUtils;
 
 /**
  * 导入Excel文件（支持“XLS”和“XLSX”格式）

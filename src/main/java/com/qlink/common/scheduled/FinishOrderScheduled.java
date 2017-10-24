@@ -5,7 +5,7 @@
  * @date 2016年11月11日 下午3:55:53
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,11 +23,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.thread.VodafoneThread;
-import com.uu.modules.mifi.service.MifiManageService;
-import com.uu.modules.mifi.service.MifiOrderService;
-import com.uu.modules.sys.utils.DictUtils;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.thread.VodafoneThread;
+import com.qlink.modules.mifi.service.MifiManageService;
+import com.qlink.modules.mifi.service.MifiOrderService;
+import com.qlink.modules.sys.utils.DictUtils;
+import com.qlink.modules.utils.Constants;
 
 /**
  * 

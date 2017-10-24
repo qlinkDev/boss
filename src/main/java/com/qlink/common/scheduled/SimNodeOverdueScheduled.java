@@ -5,7 +5,7 @@
  * @date 2016年4月19日 上午9:51:04 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.util.List;
 import java.util.Map;
@@ -16,8 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.Socekt;
-import com.uu.modules.mifi.service.CardManageService;
+import com.qlink.common.utils.Socekt;
+import com.qlink.modules.mifi.service.CardManageService;
 
 /**
  * 

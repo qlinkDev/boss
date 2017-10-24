@@ -2,9 +2,9 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel.fieldtype;
+package com.qlink.common.utils.excel.fieldtype;
 
-import com.uu.modules.om.entity.Region;
+import com.qlink.modules.om.entity.Region;
 
 /**
  * 字段类型转换

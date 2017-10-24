@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.security;
+package com.qlink.common.security;
 
 import java.security.GeneralSecurityException;
 import java.security.SecureRandom;
@@ -16,7 +16,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.uu.common.utils.Exceptions;
+import com.qlink.common.utils.Exceptions;
 
 /**
  * 支持HMAC-SHA1消息签名 及 DES/AES对称加密的工具类.

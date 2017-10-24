@@ -5,7 +5,7 @@
  * @date 2016年4月15日 下午2:11:29 
  * @version V1.0 
  */
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -19,13 +19,13 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.HttpRequest;
-import com.uu.modules.mifi.service.MifiBootService;
-import com.uu.modules.sys.utils.DictUtils;
-import com.uu.modules.user.condition.DayPassRecordCondition;
-import com.uu.modules.user.entity.DayPassRecord;
-import com.uu.modules.user.service.DayPassRecordService;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.utils.HttpRequest;
+import com.qlink.modules.mifi.service.MifiBootService;
+import com.qlink.modules.sys.utils.DictUtils;
+import com.qlink.modules.user.condition.DayPassRecordCondition;
+import com.qlink.modules.user.entity.DayPassRecord;
+import com.qlink.modules.user.service.DayPassRecordService;
+import com.qlink.modules.utils.Constants;
 
 /**
  * @Description MIFI开机(一天一条MIFI状态为4记录),用户消费记录回调渠道商接口通知    定时处理

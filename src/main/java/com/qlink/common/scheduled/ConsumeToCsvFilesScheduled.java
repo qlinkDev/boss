@@ -5,7 +5,7 @@
  * @date 2016年4月19日 上午9:51:04 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -21,14 +21,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.CsvWriter;
-import com.uu.common.utils.DateUtils;
-import com.uu.common.utils.PropertiesLoader;
-import com.uu.modules.om.condition.ConsumeRecordCondition;
-import com.uu.modules.om.entity.Channel;
-import com.uu.modules.om.entity.ConsumeRecord;
-import com.uu.modules.om.service.ChannelService;
-import com.uu.modules.om.service.ConsumeRecordService;
+import com.qlink.common.utils.CsvWriter;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.common.utils.PropertiesLoader;
+import com.qlink.modules.om.condition.ConsumeRecordCondition;
+import com.qlink.modules.om.entity.Channel;
+import com.qlink.modules.om.entity.ConsumeRecord;
+import com.qlink.modules.om.service.ChannelService;
+import com.qlink.modules.om.service.ConsumeRecordService;
 
 /** 
  * @Description 消费记录生成CSV文件 定时处理

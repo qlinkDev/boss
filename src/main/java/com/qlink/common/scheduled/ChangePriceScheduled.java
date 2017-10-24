@@ -5,7 +5,7 @@
  * @date 2016年4月19日 上午9:51:04 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -18,9 +18,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.modules.om.condition.PriceCondition;
-import com.uu.modules.om.entity.Price;
-import com.uu.modules.om.service.PriceService;
+import com.qlink.modules.om.condition.PriceCondition;
+import com.qlink.modules.om.entity.Price;
+import com.qlink.modules.om.service.PriceService;
 
 /**
  * 

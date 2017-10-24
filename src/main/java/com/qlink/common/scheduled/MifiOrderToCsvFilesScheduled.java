@@ -5,7 +5,7 @@
  * @date 2016年4月19日 上午9:51:04 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.scheduled;
+package com.qlink.common.scheduled;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -26,13 +26,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uu.common.utils.CsvWriter;
-import com.uu.common.utils.PropertiesLoader;
-import com.uu.modules.mifi.entity.MifiOrder;
-import com.uu.modules.mifi.entity.MifiOrderDetail;
-import com.uu.modules.mifi.service.MifiOrderService;
-import com.uu.modules.om.entity.Channel;
-import com.uu.modules.om.service.ChannelService;
+import com.qlink.common.utils.CsvWriter;
+import com.qlink.common.utils.PropertiesLoader;
+import com.qlink.modules.mifi.entity.MifiOrder;
+import com.qlink.modules.mifi.entity.MifiOrderDetail;
+import com.qlink.modules.mifi.service.MifiOrderService;
+import com.qlink.modules.om.entity.Channel;
+import com.qlink.modules.om.service.ChannelService;
 
 /** 
  * @Description MIFI订单生成CSV文件 定时处理

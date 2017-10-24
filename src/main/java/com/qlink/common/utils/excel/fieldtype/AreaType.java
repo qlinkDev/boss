@@ -2,10 +2,10 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils.excel.fieldtype;
+package com.qlink.common.utils.excel.fieldtype;
 
-import com.uu.modules.sys.entity.Area;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.modules.sys.entity.Area;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 字段类型转换

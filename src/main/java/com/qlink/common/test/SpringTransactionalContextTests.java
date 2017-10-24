@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.test;
+package com.qlink.common.test;
 
 import javax.sql.DataSource;
 

@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils.dianji;
+package com.qlink.common.utils.dianji;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;

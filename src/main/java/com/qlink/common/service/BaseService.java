@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.service;
+package com.qlink.common.service;
 
 import java.util.Iterator;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
-import com.uu.modules.sys.entity.Role;
-import com.uu.modules.sys.entity.User;
+import com.qlink.modules.sys.entity.Role;
+import com.qlink.modules.sys.entity.User;
 
 /**
  * Service基类

@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.servlet;
+package com.qlink.common.servlet;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,8 +17,8 @@ import org.springframework.util.FileCopyUtils;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
-import com.uu.common.config.Global;
-import com.uu.common.web.CKFinderConfig;
+import com.qlink.common.config.Global;
+import com.qlink.common.web.CKFinderConfig;
 
 /**
  * 查看CK上传的图片

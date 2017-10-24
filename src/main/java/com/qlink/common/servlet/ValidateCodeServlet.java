@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.servlet;
+package com.qlink.common.servlet;
 
 import java.awt.Color;
 import java.awt.Font;
