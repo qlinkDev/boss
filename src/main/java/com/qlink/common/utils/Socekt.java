@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -19,9 +19,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.uu.common.scheduled.SimNodeStatusScheduled;
-import com.uu.modules.mifi.service.CardManageService;
-import com.uu.modules.mifi.service.MifiManageService;
+import com.qlink.common.scheduled.SimNodeStatusScheduled;
+import com.qlink.modules.mifi.service.CardManageService;
+import com.qlink.modules.mifi.service.MifiManageService;
 
 public class Socekt {
 	

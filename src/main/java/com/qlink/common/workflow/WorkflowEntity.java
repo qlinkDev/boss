@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.workflow;
+package com.qlink.common.workflow;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import org.activiti.engine.task.Task;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Maps;
-import com.uu.common.utils.Collections3;
+import com.qlink.common.utils.Collections3;
 
 public class WorkflowEntity {
 	

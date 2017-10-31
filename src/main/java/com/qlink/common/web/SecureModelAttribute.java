@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

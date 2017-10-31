@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

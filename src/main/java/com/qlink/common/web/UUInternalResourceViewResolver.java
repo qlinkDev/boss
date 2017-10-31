@@ -5,7 +5,7 @@
  * @date 2016年4月6日 下午12:05:48 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import org.springframework.util.ClassUtils;
 import org.springframework.web.servlet.view.AbstractUrlBasedView;

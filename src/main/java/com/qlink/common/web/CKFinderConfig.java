@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import com.ckfinder.connector.ServletContextFactory;
 import com.ckfinder.connector.configuration.Configuration;
 import com.ckfinder.connector.data.AccessControlLevel;
 import com.ckfinder.connector.utils.AccessControlUtil;
-import com.uu.modules.sys.security.SystemAuthorizingRealm.Principal;
+import com.qlink.modules.sys.security.SystemAuthorizingRealm.Principal;
 
 /**
  * CKFinder配置

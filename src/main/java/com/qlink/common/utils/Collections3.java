@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.util.ArrayList;
 import java.util.Collection;

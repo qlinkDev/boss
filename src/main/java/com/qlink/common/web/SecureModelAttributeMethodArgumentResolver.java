@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.lang.annotation.Annotation;
 import java.util.Collections;
@@ -28,7 +28,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.mvc.method.annotation.ExtendedServletRequestDataBinder;
 
-import com.uu.common.utils.Reflections;
+import com.qlink.common.utils.Reflections;
 
 /**
  * @author 薛定谔的猫

@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.Validate;
 
 import com.google.common.net.HttpHeaders;
-import com.uu.common.utils.Encodes;
+import com.qlink.common.utils.Encodes;
 
 /**
  * Http与Servlet工具类.

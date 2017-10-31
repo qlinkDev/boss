@@ -5,7 +5,7 @@
  * @date 2016年11月8日 上午10:42:31 
  * @version V1.0 
  */
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,8 +32,8 @@ import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.uu.common.config.Global;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.config.Global;
+import com.qlink.modules.utils.Constants;
 
 /** 
  * @Description 沃达丰接口

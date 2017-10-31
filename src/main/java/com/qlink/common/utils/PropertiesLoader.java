@@ -5,7 +5,7 @@
  * 
  * $Id: PropertiesLoader.java,v 1.1 2016/03/15 08:20:48 wangyong Exp $
  */
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

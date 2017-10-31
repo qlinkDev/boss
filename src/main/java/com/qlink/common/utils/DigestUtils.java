@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils.json;
+package com.qlink.common.utils.json;
 
 import java.text.DateFormat;  
 import java.text.SimpleDateFormat;  

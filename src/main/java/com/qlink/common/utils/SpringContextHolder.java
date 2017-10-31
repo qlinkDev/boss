@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.stereotype.Service;
 
-import com.uu.common.config.Global;
+import com.qlink.common.config.Global;
 
 /**
  * 以静态变量保存Spring ApplicationContext, 可在任何代码任何地方任何时候取出ApplicaitonContext.

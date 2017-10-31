@@ -1,11 +1,11 @@
-package main.java.com.qlink.common.workflow;
+package com.qlink.common.workflow;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.beanutils.ConvertUtils;
 
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.StringUtils;
 
 public class Variable {
 

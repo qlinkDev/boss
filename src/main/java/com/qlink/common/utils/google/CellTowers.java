@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils.google;
+package com.qlink.common.utils.google;
 
 /**
  * 移动电话基站对象

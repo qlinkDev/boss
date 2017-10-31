@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils.mail;
+package com.qlink.common.utils.mail;
 
 import java.util.Properties;
 
@@ -16,8 +16,8 @@ import javax.mail.internet.MimeUtility;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.uu.common.utils.PropertiesLoader;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.PropertiesLoader;
+import com.qlink.common.utils.StringUtils;
 
 /**
  * 

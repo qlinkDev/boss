@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.workflow;
+package com.qlink.common.workflow;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

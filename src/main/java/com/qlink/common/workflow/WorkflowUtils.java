@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.workflow;
+package com.qlink.common.workflow;
 
 import java.util.List;
 import java.util.Map;
@@ -13,9 +13,9 @@ import org.activiti.engine.task.Task;
 import org.apache.commons.lang3.ObjectUtils;
 
 import com.google.common.collect.Maps;
-import com.uu.common.utils.SpringContextHolder;
-import com.uu.common.utils.StringUtils;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.utils.SpringContextHolder;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.modules.sys.utils.UserUtils;
 /**
  * 
  *

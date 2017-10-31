@@ -1,13 +1,13 @@
-package main.java.com.qlink.common.utils.phone;
+package com.qlink.common.utils.phone;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import com.uu.common.utils.StringUtils;
-import com.uu.modules.mifi.entity.CardMonitor;
-import com.uu.modules.sys.utils.DictUtils;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.modules.mifi.entity.CardMonitor;
+import com.qlink.modules.sys.utils.DictUtils;
 
 /**
  * 

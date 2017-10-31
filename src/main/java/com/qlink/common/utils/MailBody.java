@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -8,9 +8,9 @@ import java.util.Map;
 
 import org.apache.commons.lang.ObjectUtils;
 
-import com.uu.modules.mifi.entity.CardMonitor;
-import com.uu.modules.mifi.entity.DeviceMonitorDetail;
-import com.uu.modules.sys.utils.DictUtils;
+import com.qlink.modules.mifi.entity.CardMonitor;
+import com.qlink.modules.mifi.entity.DeviceMonitorDetail;
+import com.qlink.modules.sys.utils.DictUtils;
 
 /**
  * 系统所有模块的邮件内容

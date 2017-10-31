@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.beans.PropertyEditorSupport;
 import java.util.Date;
@@ -20,8 +20,8 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uu.common.beanvalidator.BeanValidators;
-import com.uu.common.utils.DateUtils;
+import com.qlink.common.beanvalidator.BeanValidators;
+import com.qlink.common.utils.DateUtils;
 
 /**
  * 控制器支持类

@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils.thread;
+package com.qlink.common.utils.thread;
 
 /**
  * 

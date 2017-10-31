@@ -1,4 +1,4 @@
-package main.java.com.qlink.common.utils;
+package com.qlink.common.utils;
 
 import javax.crypto.Mac;
 import javax.crypto.SecretKey;

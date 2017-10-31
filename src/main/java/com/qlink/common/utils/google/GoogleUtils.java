@@ -1,6 +1,6 @@
-package main.java.com.qlink.common.utils.google;
+package com.qlink.common.utils.google;
 
-import com.uu.common.utils.HttpRequest;
+import com.qlink.common.utils.HttpRequest;
 
 import net.sf.json.JSONObject;
 

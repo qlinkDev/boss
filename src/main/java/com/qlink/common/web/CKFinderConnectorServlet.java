@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.common.web;
+package com.qlink.common.web;
 
 import java.io.IOException;
 
@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 
 import com.ckfinder.connector.ConnectorServlet;
-import com.uu.common.utils.FileUtils;
-import com.uu.modules.sys.entity.User;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.utils.FileUtils;
+import com.qlink.modules.sys.entity.User;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * CKFinderConnectorServlet

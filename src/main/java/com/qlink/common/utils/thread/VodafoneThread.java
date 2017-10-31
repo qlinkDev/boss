@@ -5,13 +5,13 @@
  * @date 2017年2月24日 上午10:45:07 
  * @version V1.0 
  */ 
-package main.java.com.qlink.common.utils.thread;
+package com.qlink.common.utils.thread;
 
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.uu.common.utils.VodafoneUtils;
+import com.qlink.common.utils.VodafoneUtils;
 
 /** 
  * @Description Vodafone级别修改 线程

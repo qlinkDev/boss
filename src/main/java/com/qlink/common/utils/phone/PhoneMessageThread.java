@@ -1,10 +1,10 @@
-package main.java.com.qlink.common.utils.phone;
+package com.qlink.common.utils.phone;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.uu.common.utils.PropertiesLoader;
-import com.uu.common.utils.dianji.SmsClientSend;
+import com.qlink.common.utils.PropertiesLoader;
+import com.qlink.common.utils.dianji.SmsClientSend;
 
 /**
  * 
