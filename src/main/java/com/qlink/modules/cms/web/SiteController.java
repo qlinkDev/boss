@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web;
+package com.qlink.modules.cms.web;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uu.common.config.Global;
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.CookieUtils;
-import com.uu.common.utils.StringUtils;
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.SiteService;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.config.Global;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.CookieUtils;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.SiteService;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 站点Controller

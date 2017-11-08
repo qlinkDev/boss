@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web;
+package com.qlink.modules.cms.web;
 
 import java.util.List;
 import java.util.Map;
@@ -14,8 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.service.StatsService;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.service.StatsService;
 
 /**
  * 统计Controller

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import java.util.List;
 import java.util.Set;
@@ -17,14 +17,14 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.uu.common.persistence.Page;
-import com.uu.common.service.BaseService;
-import com.uu.modules.cms.dao.CategoryDao;
-import com.uu.modules.cms.entity.Category;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.utils.CmsUtils;
-import com.uu.modules.sys.entity.User;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.service.BaseService;
+import com.qlink.modules.cms.dao.CategoryDao;
+import com.qlink.modules.cms.entity.Category;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.utils.CmsUtils;
+import com.qlink.modules.sys.entity.User;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 栏目Service

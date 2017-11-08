@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.entity;
+package com.qlink.modules.cms.entity;
 
 import java.util.List;
 
@@ -31,9 +31,9 @@ import org.hibernate.search.annotations.Store;
 import org.hibernate.validator.constraints.Length;
 
 import com.google.common.collect.Lists;
-import com.uu.common.persistence.IdEntity;
-import com.uu.modules.cms.utils.CmsUtils;
-import com.uu.modules.sys.entity.Office;
+import com.qlink.common.persistence.IdEntity;
+import com.qlink.modules.cms.utils.CmsUtils;
+import com.qlink.modules.sys.entity.Office;
 
 /**
  * 栏目Entity

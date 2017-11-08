@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.entity;
+package com.qlink.modules.cms.entity;
 
 import java.util.Date;
 import java.util.List;
@@ -36,8 +36,8 @@ import org.hibernate.validator.constraints.Length;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
 import com.google.common.collect.Lists;
-import com.uu.common.persistence.IdEntity;
-import com.uu.modules.cms.utils.CmsUtils;
+import com.qlink.common.persistence.IdEntity;
+import com.qlink.modules.cms.utils.CmsUtils;
 
 /**
  * 文章Entity

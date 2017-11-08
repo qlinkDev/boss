@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web.front;
+package com.qlink.modules.cms.web.front;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,16 +14,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.StringUtils;
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.entity.Article;
-import com.uu.modules.cms.entity.Guestbook;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.ArticleService;
-import com.uu.modules.cms.service.GuestbookService;
-import com.uu.modules.cms.utils.CmsUtils;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.entity.Article;
+import com.qlink.modules.cms.entity.Guestbook;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.ArticleService;
+import com.qlink.modules.cms.service.GuestbookService;
+import com.qlink.modules.cms.utils.CmsUtils;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 网站搜索Controller

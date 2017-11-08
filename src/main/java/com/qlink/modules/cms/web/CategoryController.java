@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web;
+package com.qlink.modules.cms.web;
 
 import java.util.List;
 import java.util.Map;
@@ -22,16 +22,16 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.uu.common.config.Global;
-import com.uu.common.utils.StringUtils;
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.entity.Article;
-import com.uu.modules.cms.entity.Category;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.CategoryService;
-import com.uu.modules.cms.service.FileTplService;
-import com.uu.modules.cms.service.SiteService;
-import com.uu.modules.cms.utils.TplUtils;
+import com.qlink.common.config.Global;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.entity.Article;
+import com.qlink.modules.cms.entity.Category;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.CategoryService;
+import com.qlink.modules.cms.service.FileTplService;
+import com.qlink.modules.cms.service.SiteService;
+import com.qlink.modules.cms.utils.TplUtils;
 
 /**
  * 栏目Controller

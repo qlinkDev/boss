@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web.front;
+package com.qlink.modules.cms.web.front;
 
 import java.util.Date;
 
@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.uu.common.config.Global;
-import com.uu.common.persistence.Page;
-import com.uu.common.servlet.ValidateCodeServlet;
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.entity.Guestbook;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.GuestbookService;
-import com.uu.modules.cms.utils.CmsUtils;
+import com.qlink.common.config.Global;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.servlet.ValidateCodeServlet;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.entity.Guestbook;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.GuestbookService;
+import com.qlink.modules.cms.utils.CmsUtils;
 
 /**
  * 留言板Controller

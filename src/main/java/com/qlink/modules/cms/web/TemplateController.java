@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.cms.web;
+package com.qlink.modules.cms.web;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,10 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.FileTplService;
-import com.uu.modules.cms.service.SiteService;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.FileTplService;
+import com.qlink.modules.cms.service.SiteService;
 
 /**
  * 站点Controller

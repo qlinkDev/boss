@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uu.common.service.BaseService;
-import com.uu.modules.cms.entity.FileTpl;
+import com.qlink.common.service.BaseService;
+import com.qlink.modules.cms.entity.FileTpl;
 
 /**
  * User: songlai

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.entity;
+package com.qlink.modules.cms.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -15,8 +15,8 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.validator.constraints.Length;
 
-import com.uu.common.persistence.IdEntity;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.persistence.IdEntity;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 站点Entity

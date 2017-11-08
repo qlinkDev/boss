@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import java.util.Date;
 import java.util.List;
@@ -17,17 +17,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
-import com.uu.common.persistence.Page;
-import com.uu.common.service.BaseService;
-import com.uu.common.utils.CacheUtils;
-import com.uu.common.utils.StringUtils;
-import com.uu.modules.cms.dao.CategoryDao;
-import com.uu.modules.cms.dao.LinkDao;
-import com.uu.modules.cms.entity.Article;
-import com.uu.modules.cms.entity.Category;
-import com.uu.modules.cms.entity.Link;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.service.BaseService;
+import com.qlink.common.utils.CacheUtils;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.modules.cms.dao.CategoryDao;
+import com.qlink.modules.cms.dao.LinkDao;
+import com.qlink.modules.cms.entity.Article;
+import com.qlink.modules.cms.entity.Category;
+import com.qlink.modules.cms.entity.Link;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /**
  * 链接Service

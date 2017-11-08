@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.criterion.DetachedCriteria;
@@ -11,10 +11,10 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.service.BaseService;
-import com.uu.modules.cms.dao.CommentDao;
-import com.uu.modules.cms.entity.Comment;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.service.BaseService;
+import com.qlink.modules.cms.dao.CommentDao;
+import com.qlink.modules.cms.entity.Comment;
 
 /**
  * 评论Service

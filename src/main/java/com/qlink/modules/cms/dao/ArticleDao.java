@@ -2,15 +2,15 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.dao;
+package com.qlink.modules.cms.dao;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.common.persistence.Parameter;
-import com.uu.modules.cms.entity.Article;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.common.persistence.Parameter;
+import com.qlink.modules.cms.entity.Article;
 
 /**
  * 文章DAO接口

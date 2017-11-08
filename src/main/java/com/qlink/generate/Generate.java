@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.generate;
+package com.qlink.generate;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,9 +17,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.io.DefaultResourceLoader;
 
 import com.google.common.collect.Maps;
-import com.uu.common.utils.DateUtils;
-import com.uu.common.utils.FileUtils;
-import com.uu.common.utils.FreeMarkers;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.common.utils.FileUtils;
+import com.qlink.common.utils.FreeMarkers;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

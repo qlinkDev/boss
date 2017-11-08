@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import java.util.List;
 
@@ -21,10 +21,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
-import com.uu.common.persistence.Page;
-import com.uu.common.service.BaseService;
-import com.uu.modules.cms.dao.GuestbookDao;
-import com.uu.modules.cms.entity.Guestbook;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.service.BaseService;
+import com.qlink.modules.cms.dao.GuestbookDao;
+import com.qlink.modules.cms.entity.Guestbook;
 
 /**
  * 留言Service

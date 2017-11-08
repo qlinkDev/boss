@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.cms.entity;
+package com.qlink.modules.cms.entity;
 
 import org.apache.commons.io.FileUtils;
 

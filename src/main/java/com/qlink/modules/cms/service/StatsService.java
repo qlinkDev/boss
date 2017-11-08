@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import java.util.Date;
 import java.util.List;
@@ -12,13 +12,13 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uu.common.persistence.Parameter;
-import com.uu.common.service.BaseService;
-import com.uu.common.utils.DateUtils;
-import com.uu.common.utils.StringUtils;
-import com.uu.modules.cms.dao.ArticleDao;
-import com.uu.modules.cms.entity.Article;
-import com.uu.modules.cms.entity.Site;
+import com.qlink.common.persistence.Parameter;
+import com.qlink.common.service.BaseService;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.modules.cms.dao.ArticleDao;
+import com.qlink.modules.cms.entity.Article;
+import com.qlink.modules.cms.entity.Site;
 
 /**
  * 统计Service

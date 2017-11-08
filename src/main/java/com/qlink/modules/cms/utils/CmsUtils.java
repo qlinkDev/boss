@@ -2,26 +2,26 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.utils;
+package com.qlink.modules.cms.utils;
 
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.uu.common.config.Global;
-import com.uu.common.mapper.JsonMapper;
-import com.uu.common.persistence.Page;
-import com.uu.common.utils.CacheUtils;
-import com.uu.common.utils.SpringContextHolder;
-import com.uu.modules.cms.entity.Article;
-import com.uu.modules.cms.entity.Category;
-import com.uu.modules.cms.entity.Link;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.service.ArticleService;
-import com.uu.modules.cms.service.CategoryService;
-import com.uu.modules.cms.service.LinkService;
-import com.uu.modules.cms.service.SiteService;
+import com.qlink.common.config.Global;
+import com.qlink.common.mapper.JsonMapper;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.utils.CacheUtils;
+import com.qlink.common.utils.SpringContextHolder;
+import com.qlink.modules.cms.entity.Article;
+import com.qlink.modules.cms.entity.Category;
+import com.qlink.modules.cms.entity.Link;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.service.ArticleService;
+import com.qlink.modules.cms.service.CategoryService;
+import com.qlink.modules.cms.service.LinkService;
+import com.qlink.modules.cms.service.SiteService;
 
 import javax.servlet.ServletContext;
 

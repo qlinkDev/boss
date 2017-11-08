@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.entity;
+package com.qlink.modules.cms.entity;
 
 import java.util.Date;
 
@@ -32,9 +32,9 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
-import com.uu.common.persistence.BaseEntity;
-import com.uu.common.utils.IdGen;
-import com.uu.modules.sys.entity.User;
+import com.qlink.common.persistence.BaseEntity;
+import com.qlink.common.utils.IdGen;
+import com.qlink.modules.sys.entity.User;
 
 /**
  * 留言Entity

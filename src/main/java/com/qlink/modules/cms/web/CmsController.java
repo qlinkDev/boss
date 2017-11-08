@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.web;
+package com.qlink.modules.cms.web;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.uu.common.web.BaseController;
-import com.uu.modules.cms.service.CategoryService;
+import com.qlink.common.web.BaseController;
+import com.qlink.modules.cms.service.CategoryService;
 
 /**
  * 内容管理Controller

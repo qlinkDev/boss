@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.cms.utils;
+package com.qlink.modules.cms.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -2,7 +2,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-package main.java.com.qlink.modules.cms.service;
+package com.qlink.modules.cms.service;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -11,11 +11,11 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.uu.common.persistence.Page;
-import com.uu.common.service.BaseService;
-import com.uu.modules.cms.dao.SiteDao;
-import com.uu.modules.cms.entity.Site;
-import com.uu.modules.cms.utils.CmsUtils;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.service.BaseService;
+import com.qlink.modules.cms.dao.SiteDao;
+import com.qlink.modules.cms.entity.Site;
+import com.qlink.modules.cms.utils.CmsUtils;
 
 /**
  * 站点Service
