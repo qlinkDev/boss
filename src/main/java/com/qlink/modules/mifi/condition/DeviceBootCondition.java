@@ -5,7 +5,7 @@
  * @date 2016年11月22日 上午10:17:49 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import java.util.Date;
 
@@ -15,9 +15,9 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.sys.entity.User;
-import com.uu.modules.sys.utils.UserUtils;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.sys.entity.User;
+import com.qlink.modules.sys.utils.UserUtils;
 
 /** 
  * @Description 设备开机   查询条件类

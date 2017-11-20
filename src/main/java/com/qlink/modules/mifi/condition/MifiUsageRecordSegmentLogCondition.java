@@ -5,14 +5,14 @@
  * @date 2017年3月3日 下午4:13:04 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.common.utils.StringUtils;
 
 /** 
  * @Description 

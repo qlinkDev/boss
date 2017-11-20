@@ -5,7 +5,7 @@
  * @date 2017年5月23日 下午3:08:05 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -16,8 +16,8 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.om.entity.Price;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.om.entity.Price;
 
 /** 
  * @Description 流量统计记录  查询条件类

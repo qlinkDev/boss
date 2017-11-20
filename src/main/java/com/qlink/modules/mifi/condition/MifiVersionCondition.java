@@ -5,7 +5,7 @@
  * @date 2016年5月20日 下午2:53:11 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.criterion.DetachedCriteria;

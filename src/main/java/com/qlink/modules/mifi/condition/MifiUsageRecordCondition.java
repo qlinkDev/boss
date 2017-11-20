@@ -1,11 +1,11 @@
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.common.utils.StringUtils;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.common.utils.StringUtils;
 
 /**
  * 使用记录查询条件

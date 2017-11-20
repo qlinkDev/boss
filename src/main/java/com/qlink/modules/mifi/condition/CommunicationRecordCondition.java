@@ -5,7 +5,7 @@
  * @date 2016年3月18日 下午5:20:02 
  * @version V1.0 
  */
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.criterion.DetachedCriteria;
@@ -13,8 +13,8 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.om.entity.Region;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.om.entity.Region;
 
 /**
  * 通信记录 查询条件类

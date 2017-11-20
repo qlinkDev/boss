@@ -5,7 +5,7 @@
  * @date 2016年12月7日 上午11:02:17 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -16,7 +16,7 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
+import com.qlink.common.utils.DateUtils;
 
 /** 
  * @Description MIFI开机(一天一条MIFI状态为4记录) 查询条件类

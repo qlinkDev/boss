@@ -5,7 +5,7 @@
  * @date 2016年4月8日 上午11:52:33 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.condition;
+package com.qlink.modules.mifi.condition;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -17,9 +17,9 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import com.uu.common.utils.DateUtils;
-import com.uu.modules.mifi.entity.TestDevice.Status;
-import com.uu.modules.om.entity.ConsumeRecord;
+import com.qlink.common.utils.DateUtils;
+import com.qlink.modules.mifi.entity.TestDevice.Status;
+import com.qlink.modules.om.entity.ConsumeRecord;
 
 /** 
  * @Description 测试设备 查询条件类
