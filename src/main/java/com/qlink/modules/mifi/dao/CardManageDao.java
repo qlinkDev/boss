@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.common.persistence.Page;
-import com.uu.common.persistence.Parameter;
-import com.uu.modules.mifi.entity.CardBasicInfo;
-import com.uu.modules.utils.Constants;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.common.persistence.Page;
+import com.qlink.common.persistence.Parameter;
+import com.qlink.modules.mifi.entity.CardBasicInfo;
+import com.qlink.modules.utils.Constants;
 
 /**
  * 

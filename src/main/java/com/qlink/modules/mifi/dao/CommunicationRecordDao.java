@@ -5,12 +5,12 @@
  * @date 2016年3月18日 上午11:13:16 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.entity.CommunicationRecord;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.entity.CommunicationRecord;
 
 /**
  * 通信记录DAO

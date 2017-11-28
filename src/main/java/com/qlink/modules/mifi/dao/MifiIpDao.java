@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.common.persistence.Parameter;
-import com.uu.common.utils.StringUtils;
-import com.uu.modules.mifi.entity.MifiIp;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.common.persistence.Parameter;
+import com.qlink.common.utils.StringUtils;
+import com.qlink.modules.mifi.entity.MifiIp;
 /**
  * 多服务器配置管理
  * @Description 

@@ -5,7 +5,7 @@
  * @date 2016年11月22日 上午10:15:51 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -14,10 +14,10 @@ import org.apache.commons.lang.StringUtils;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.common.persistence.Page;
-import com.uu.modules.mifi.condition.DeviceBootCondition;
-import com.uu.modules.mifi.entity.DeviceBoot;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.common.persistence.Page;
+import com.qlink.modules.mifi.condition.DeviceBootCondition;
+import com.qlink.modules.mifi.entity.DeviceBoot;
 
 /** 
  * @Description 设备开机   DAO接口类

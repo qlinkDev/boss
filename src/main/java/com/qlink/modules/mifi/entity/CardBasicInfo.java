@@ -1,4 +1,4 @@
-package main.java.com.qlink.modules.mifi.entity;
+package com.qlink.modules.mifi.entity;
 
 import java.util.Date;
 
@@ -16,9 +16,9 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
-import com.uu.common.persistence.BaseEntity;
-import com.uu.common.utils.IdGen;
-import com.uu.common.utils.excel.annotation.ExcelField;
+import com.qlink.common.persistence.BaseEntity;
+import com.qlink.common.utils.IdGen;
+import com.qlink.common.utils.excel.annotation.ExcelField;
 
 /**
  * @author wangyong

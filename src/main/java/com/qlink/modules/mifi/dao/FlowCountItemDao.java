@@ -5,7 +5,7 @@
  * @date 2017年5月23日 下午3:21:49 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.entity.FlowCountItem;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.entity.FlowCountItem;
 
 /** 
  * @Description 流量统计项(国家流量) DAO接口类

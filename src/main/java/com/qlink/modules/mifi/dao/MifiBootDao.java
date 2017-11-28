@@ -5,7 +5,7 @@
  * @date 2016年12月7日 上午11:01:11 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.Map;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.common.persistence.Page;
-import com.uu.modules.mifi.condition.MifiBootCondition;
-import com.uu.modules.mifi.entity.MifiBoot;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.common.persistence.Page;
+import com.qlink.modules.mifi.condition.MifiBootCondition;
+import com.qlink.modules.mifi.entity.MifiBoot;
 
 /** 
  * @Description MIFI开机(一天一条MIFI状态为4记录) DAO接口类

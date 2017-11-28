@@ -5,7 +5,7 @@
  * @date 2016年4月15日 上午10:16:58 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,8 +14,8 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.entity.CardMonitor;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.entity.CardMonitor;
 
 /** 
  * @Description 卡监控信息 DAO

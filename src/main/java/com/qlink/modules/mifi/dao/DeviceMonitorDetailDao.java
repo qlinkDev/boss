@@ -5,12 +5,12 @@
  * @date 2016年5月20日 下午2:43:53 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.entity.DeviceMonitorDetail;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.entity.DeviceMonitorDetail;
 
 /** 
  * @Description 设备监控详细信息 DAO

@@ -5,7 +5,7 @@
  * @date 2017年3月3日 上午10:38:12 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -13,9 +13,9 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.condition.MifiUsageRecordSegmentLogCondition;
-import com.uu.modules.mifi.entity.MifiUsageRecordSegmentLog;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.condition.MifiUsageRecordSegmentLogCondition;
+import com.qlink.modules.mifi.entity.MifiUsageRecordSegmentLog;
 
 /** 
  * @Description 

@@ -5,7 +5,7 @@
  * @date 2016年11月9日 下午3:30:08 
  * @version V1.0 
  */ 
-package main.java.com.qlink.modules.mifi.dao;
+package com.qlink.modules.mifi.dao;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.uu.common.persistence.BaseDao;
-import com.uu.modules.mifi.entity.DeviceDetectionItem;
+import com.qlink.common.persistence.BaseDao;
+import com.qlink.modules.mifi.entity.DeviceDetectionItem;
 
 /** 
  * @Description 设备检查项  DAO接口
