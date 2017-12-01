@@ -1,123 +1,108 @@
 pragma solidity ^0.4.13;
 
-/*********************** QlcÏûºÄÏà¹ØÖÇÄÜºÏÔ¼ ***********************/
-/// @title QlcÊı¾İ×Öµä
-contract QlcDataDictionary {
+/*********************** Qlcæ¶ˆè€—ç›¸å…³æ™ºèƒ½åˆçº¦ ***********************/
+/// @title Qlcæ•°å­—èµ„äº§
+contract SzzcContract {
 	
-	mapping (address => uint256) public balanceOf;	// µØÖ·ºÍµØÖ·Ëù¾ßÓĞµÄQLCÊıÁ¿Êı×é
+	mapping (address => uint256) public szzcBalanceOf;	// åœ°å€å’Œåœ°å€æ‰€å…·æœ‰çš„QLCæ•°é‡æ•°ç»„
 
-	// Ôö¼Ó
-	function increase(address _target, uint256 _value) returns (bool success) {
-		balanceOf[_target] += _value;
+	// å¢åŠ 
+	function increase(address _target, uint256 _value) internal returns (bool success) {
+		szzcBalanceOf[_target] += _value;
 		return true;
 	}
 	
-	// ¼õÉÙ
-	function reduce(address _target, uint256 _value) returns (bool success) {
-		require (_value < balanceOf[_target]);     // ¼ì²éÓà¶îÊÇ·ñ×ã¹»
-		balanceOf[_target] -= _value;
+	// å‡å°‘
+	function reduce(address _target, uint256 _value) internal returns (bool success) {
+		require (_value < szzcBalanceOf[_target]);     // æ£€æŸ¥ä½™é¢æ˜¯å¦è¶³å¤Ÿ
+		szzcBalanceOf[_target] -= _value;
 		return true;
 	}
 }
 
-/// @title QLC½»Ò×¼ÇÂ¼
-contract QlcRecord {
+/// @title æ•°å­—èµ„äº§äº¤æ˜“è®°å½•
+contract SzzcRecordContract {
 
-	// ×Ô¶¨ÒåÀàĞÍ£ºQLC½»Ò×¼ÇÂ¼
-	struct QlcRecord {
-    	address record_address;		// ¼ÇÂ¼ËùÊôµØÖ·
-		uint record_type;   		// ¼ÇÂ¼ÀàĞÍ(0_Ôö¼Ó,1_¼õÉÙ)
-		uint amount;   				// QLCÊıÁ¿
-		uint time;   				// ·¢ÉúÊ±¼ä(ºÁÃë)
-		string description;		// ÃèÊö
+	// è‡ªå®šä¹‰ç±»å‹ï¼šæ•°å­—èµ„äº§äº¤æ˜“è®°å½•
+	struct SzzcRecord {
+    	address record_address;		// è®°å½•æ‰€å±åœ°å€
+		uint record_type;   		// è®°å½•ç±»å‹(0_å¢åŠ ,1_å‡å°‘)
+		uint amount;   				// QLCæ•°é‡
+		uint time;   				// å‘ç”Ÿæ—¶é—´(ç§’)
 	}
 	
-    // Ò»¸ö´æ´¢`QlcRecord`½á¹¹µÄ¶¯Ì¬Êı×é
-    QlcRecord[] private qlcRecords;
+    // ä¸€ä¸ªå­˜å‚¨`SzzcRecord`ç»“æ„çš„æ˜ å°„
+    uint public szzcRecordId;
+    mapping (uint => SzzcRecord) public szzcRecords;
 	
-    // ´æ´¢Éè±¸Á÷Á¿Êı¾İ
-    function qlcRecord_add(address record_address, uint record_type, uint amount, uint time, string description) {   		
-   		// ´æ´¢
- 		qlcRecords.push(QlcRecord({
-            record_address: record_address,
-            record_type: record_type,
-            amount: amount,
-            time: time,
-            description: description
-        }));
+    // å­˜å‚¨æ•°å­—èµ„äº§äº¤æ˜“è®°å½•
+    function szzcRecordAdd(address record_address, uint record_type, uint amount, uint time) returns (uint) {   		
+   		// å­˜å‚¨
+   		szzcRecordId = szzcRecordId + 1;
+   		szzcRecords[szzcRecordId] = SzzcRecord(record_address, record_type, amount, time);
+ 		
+ 		return szzcRecordId;
     }
 }
 
-/// @title Éè±¸Á÷Á¿¼ÇÂ¼
-contract DeviceFlowRecordContract is QlcRecord, QlcDataDictionary {
+/// @title è®¾å¤‡æµé‡è®°å½•
+contract DeviceFlowRecordContract is SzzcRecordContract, SzzcContract {
 
-	// ×Ô¶¨ÒåÀàĞÍ£ºÉè±¸Á÷Á¿
+	// è‡ªå®šä¹‰ç±»å‹ï¼šè®¾å¤‡æµé‡
 	struct DeviceFlowRecord {
-		bytes32 imei;   			// Éè±¸±àºÅ£¨32×Ö½Ú£©
-    	address user_address;		// Éè±¸ËùÊôÓÃ»§¶ÔÓ¦µÄµØÖ·
-		uint used_flow;   			// ÒÑÊ¹ÓÃÁ÷Á¿(M)
-		uint time;   				// ·¢ÉúÊ±¼ä(ºÁÃë)
-		uint flow_ratio;   			// QLCÓëÁ÷Á¿±ÈÂÊ(1M¶ÔÓ¦µÄQLC*1000)
-		uint time_ratio;   			// QLCÓëÊ±¼ä±ÈÂÊ(1·ÖÖÓ¶ÔÓ¦µÄQLC*1000)
-		uint flow_sign;				// Á÷Á¿¼ä¸ô(M)
-		uint time_sign;				// Ê±¼ä¼ä¸ô(ºÁÃë)
+		bytes32 imei;   			// è®¾å¤‡ç¼–å·ï¼ˆ32å­—èŠ‚ï¼‰
+    	address user_address;		// è®¾å¤‡æ‰€å±ç”¨æˆ·å¯¹åº”çš„åœ°å€
+		uint used_flow;   			// å·²ä½¿ç”¨æµé‡(M)
+		uint time;   				// å‘ç”Ÿæ—¶é—´(æ¯«ç§’)
+		uint flow_ratio;   			// QLCä¸æµé‡æ¯”ç‡(1Må¯¹åº”çš„QLC*1000)
+		uint time_ratio;   			// QLCä¸æ—¶é—´æ¯”ç‡(1åˆ†é’Ÿå¯¹åº”çš„QLC*1000)
+		uint flow_sign;				// æµé‡é—´éš”(M)
+		uint time_sign;				// æ—¶é—´é—´éš”(æ¯«ç§’)
 	}
 	
-    // Ò»¸ö´æ´¢`DeviceFlowRecord`½á¹¹µÄ¶¯Ì¬Êı×é
-    DeviceFlowRecord[] private deviceFlowRecords;
+    // ä¸€ä¸ªå­˜å‚¨`DeviceFlowRecord`ç»“æ„çš„æ˜ å°„
+    uint public deviceFlowRecordId = 0;
+    mapping (uint => DeviceFlowRecord) public deviceFlowRecords;
+    uint flow_sign = 100;	// ç”±äºæ ˆæ·±çš„é™åˆ¶æŠŠæµé‡é—´éš”ä½œå¸¸é‡å¤„ç†
 	
-    // ´æ´¢Éè±¸Á÷Á¿Êı¾İ
-    function deviceFlowRecord_add(bytes32 imei, address user_address, uint used_flow, uint time, uint flow_ratio, uint time_ratio, uint flow_sign, uint time_sign) {
+    // å­˜å‚¨è®¾å¤‡æµé‡æ•°æ®
+    function deviceFlowRecordAdd(bytes32 imei, address user_address, uint time, uint used_flow, uint flow_ratio, uint time_ratio, uint time_sign) returns (uint) {
        
-        DeviceFlowRecord deviceFlowRecord = null;  // Èç¹ûÎªÕæ£¬Ôò±íÊ¾¸ÃÉè±¸ÒÑ¾­´æ´¢Ö»ĞèÒªĞŞ¸Ä¡£
-        // Ñ­»·deviceFlowRecordsÊı¾İ£¬Èç¹ûÉè±¸ÒÑ´æÔÚÔòĞŞ¸Ä¶ÔÏó£¬Èç¹û²»´æÔÚÔò´´½¨Ò»¸öDeviceFlowRecord¶ÔÏó²¢Ìí¼Óµ½deviceFlowRecords
-        for (uint i=0; i<deviceFlowRecords.length; i++) {
+        // å¾ªç¯deviceFlowRecordsæ•°æ®ï¼Œå¦‚æœè®¾å¤‡å·²å­˜åœ¨åˆ™ä¿®æ”¹å¯¹è±¡ï¼Œå¦‚æœä¸å­˜åœ¨åˆ™åˆ›å»ºä¸€ä¸ªDeviceFlowRecordå¯¹è±¡å¹¶æ·»åŠ åˆ°deviceFlowRecords
+        for (uint i=0; i<deviceFlowRecordId; i++) {
         	if (deviceFlowRecords[i].imei == imei) {
-        		deviceFlowRecord = deviceFlowRecords[i];
-        		break;
+   	 			// å¦‚æœä¸¤æ¬¡è®°å½•æ—¶é—´ä¹‹å·®å¤§äºæ—¶é—´é—´éš”åˆ™è®¡ç®—QLCä½¿ç”¨é‡
+        		uint flow_qlc = 0;	// æµé‡æ¶ˆè€—QLC
+	   	 		uint time_qlc = 0;	// æ—¶é—´æ¶ˆè€—QLC
+	   	 		if ((used_flow - deviceFlowRecords[i].used_flow) > flow_sign) {
+	   	 			flow_qlc = (used_flow - deviceFlowRecords[i].used_flow) * flow_ratio;
+	   	 		}
+	   	 		if ((time - deviceFlowRecords[i].time) > time_sign) {
+	   	 			time_qlc = (time - deviceFlowRecords[i].time) * time_ratio;
+	   	 		}
+	   	 		uint qlc = (flow_qlc + time_qlc);
+	   	 		if (qlc > 0) {
+	   	 			// è°ƒç”¨æ•°å­—èµ„äº§æ¶ˆè€—QLCæ–¹æ³•
+	   	 			reduce(user_address, qlc);
+	   	 			// è®°å½•æ•°å­—èµ„äº§äº¤æ˜“è®°å½•
+	   	 			szzcRecordAdd(user_address, 1, qlc, time);
+	   	 		}
+	   	 		break;
        		}
    	 	}
-   	 	// Èç¹ûÁ½´Î¼ÇÂ¼Ê±¼äÖ®²î´óÓÚÊ±¼ä¼ä¸ôÔò¼ÆËãQLCÊ¹ÓÃÁ¿
-   	 	if (deviceFlowRecord != null) {
-   	 		uint flow_qlc = 0;	// Á÷Á¿ÏûºÄQLC
-   	 		uint time_qlc = 0;	// Ê±¼äÏûºÄQLC
-   	 		if ((used_flow - deviceFlowRecord.used_flow) > flow_sign) {
-   	 			uint flow_qlc = (used_flow - deviceFlowRecord.used_flow) * flow_ratio;
-   	 		}
-   	 		if ((time - deviceFlowRecord.time) > time_sign) {
-   	 			uint time_qlc = (time - deviceFlowRecord.time) * time_ratio;
-   	 		}
-   	 		uint qlc = (flow_qlc + time_qlc);
-   	 		if (qlc > 0) {
-   	 			// µ÷ÓÃÊı×Ö×Ê²úÏûºÄQLC·½·¨
-   	 			reduce(user_address, qlc);
-   	 			// ¼ÇÂ¼Êı¾İ×Ê²ú½»Ò×¼ÇÂ¼
-   	 			qlcRecord_add(user_address, 1, qlc, time, "flow QLC:" + flow_qlc + ",time QLC" + time_qlc);
-   	 		}
-   		}
    		
-   		// ´æ´¢
- 		deviceFlowRecords.push(DeviceFlowRecord({
-            imei: imei,
-            user_address: user_address,
-            used_flow: used_flow,
-            time: time,
-            flow_ratio: flow_ratio,
-            time_ratio: time_ratio,
-            flow_sign: flow_sign,
-            time_sign: time_sign
-        }));
+   		// å­˜å‚¨
+   		deviceFlowRecordId = deviceFlowRecordId + 1;
+ 		deviceFlowRecords[deviceFlowRecordId] = DeviceFlowRecord(imei, user_address, used_flow, time, flow_ratio, time_ratio, flow_sign, time_sign);
+ 		return deviceFlowRecordId;
     }
 }
 
-/*********************** ´ú±ÒÏà¹ØÖÇÄÜºÏÔ¼ ***********************/
-/* ¶¨ÒåºÏÔ¼ÓµÓĞÕß */
+/*********************** ä»£å¸ç›¸å…³æ™ºèƒ½åˆçº¦ ***********************/
 contract owned {
-	
-    /* ºÏÔ¼ÓµÓĞÕßµØÖ· */
     address public owner;
 
-    function owned() {
+    function owned() public {
         owner = msg.sender;
     }
 
@@ -125,198 +110,247 @@ contract owned {
         require(msg.sender == owner);
         _;
     }
-	
-	/* ºÏÔ¼ËùÓĞÈ¨×ªÈÃ */
-    function transferOwnership(address newOwner) onlyOwner {
+
+    function transferOwnership(address newOwner) onlyOwner public {
         owner = newOwner;
     }
 }
 
-contract tokenRecipient { 
-	function receiveApproval(address from, uint256 value, address token, bytes extraData); 
+interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; }
+
+contract TokenERC20 {
+    // Public variables of the token
+    string public name;
+    string public symbol;
+    uint8 public decimals = 18;
+    // 18 decimals is the strongly suggested default, avoid changing it
+    uint256 public totalSupply;
+
+    // This creates an array with all balances
+    mapping (address => uint256) public balanceOf;
+    mapping (address => mapping (address => uint256)) public allowance;
+
+    // This generates a public event on the blockchain that will notify clients
+    event Transfer(address indexed from, address indexed to, uint256 value);
+
+    // This notifies clients about the amount burnt
+    event Burn(address indexed from, uint256 value);
+
+    /**
+     * Constrctor function
+     *
+     * Initializes contract with initial supply tokens to the creator of the contract
+     */
+    function TokenERC20(
+        uint256 initialSupply,
+        string tokenName,
+        string tokenSymbol
+    ) public {
+        totalSupply = initialSupply * 10 ** uint256(decimals);  // Update total supply with the decimal amount
+        balanceOf[msg.sender] = totalSupply;                // Give the creator all initial tokens
+        name = tokenName;                                   // Set the name for display purposes
+        symbol = tokenSymbol;                               // Set the symbol for display purposes
+    }
+
+    /**
+     * Internal transfer, only can be called by this contract
+     */
+    function _transfer(address _from, address _to, uint _value) internal {
+        // Prevent transfer to 0x0 address. Use burn() instead
+        require(_to != 0x0);
+        // Check if the sender has enough
+        require(balanceOf[_from] >= _value);
+        // Check for overflows
+        require(balanceOf[_to] + _value > balanceOf[_to]);
+        // Save this for an assertion in the future
+        uint previousBalances = balanceOf[_from] + balanceOf[_to];
+        // Subtract from the sender
+        balanceOf[_from] -= _value;
+        // Add the same to the recipient
+        balanceOf[_to] += _value;
+        Transfer(_from, _to, _value);
+        // Asserts are used to use static analysis to find bugs in your code. They should never fail
+        assert(balanceOf[_from] + balanceOf[_to] == previousBalances);
+    }
+
+    /**
+     * Transfer tokens
+     *
+     * Send `_value` tokens to `_to` from your account
+     *
+     * @param _to The address of the recipient
+     * @param _value the amount to send
+     */
+    function transfer(address _to, uint256 _value) public {
+        _transfer(msg.sender, _to, _value);
+    }
+
+    /**
+     * Transfer tokens from other address
+     *
+     * Send `_value` tokens to `_to` in behalf of `_from`
+     *
+     * @param _from The address of the sender
+     * @param _to The address of the recipient
+     * @param _value the amount to send
+     */
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+        require(_value <= allowance[_from][msg.sender]);     // Check allowance
+        allowance[_from][msg.sender] -= _value;
+        _transfer(_from, _to, _value);
+        return true;
+    }
+
+    /**
+     * Set allowance for other address
+     *
+     * Allows `_spender` to spend no more than `_value` tokens in your behalf
+     *
+     * @param _spender The address authorized to spend
+     * @param _value the max amount they can spend
+     */
+    function approve(address _spender, uint256 _value) public
+        returns (bool success) {
+        allowance[msg.sender][_spender] = _value;
+        return true;
+    }
+
+    /**
+     * Set allowance for other address and notify
+     *
+     * Allows `_spender` to spend no more than `_value` tokens in your behalf, and then ping the contract about it
+     *
+     * @param _spender The address authorized to spend
+     * @param _value the max amount they can spend
+     * @param _extraData some extra information to send to the approved contract
+     */
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData)
+        public
+        returns (bool success) {
+        tokenRecipient spender = tokenRecipient(_spender);
+        if (approve(_spender, _value)) {
+            spender.receiveApproval(msg.sender, _value, this, _extraData);
+            return true;
+        }
+    }
+
+    /**
+     * Destroy tokens
+     *
+     * Remove `_value` tokens from the system irreversibly
+     *
+     * @param _value the amount of money to burn
+     */
+    function burn(uint256 _value) public returns (bool success) {
+        require(balanceOf[msg.sender] >= _value);   // Check if the sender has enough
+        balanceOf[msg.sender] -= _value;            // Subtract from the sender
+        totalSupply -= _value;                      // Updates totalSupply
+        Burn(msg.sender, _value);
+        return true;
+    }
+
+    /**
+     * Destroy tokens from other account
+     *
+     * Remove `_value` tokens from the system irreversibly on behalf of `_from`.
+     *
+     * @param _from the address of the sender
+     * @param _value the amount of money to burn
+     */
+    function burnFrom(address _from, uint256 _value) public returns (bool success) {
+        require(balanceOf[_from] >= _value);                // Check if the targeted balance is enough
+        require(_value <= allowance[_from][msg.sender]);    // Check allowance
+        balanceOf[_from] -= _value;                         // Subtract from the targeted balance
+        allowance[_from][msg.sender] -= _value;             // Subtract from the sender's allowance
+        totalSupply -= _value;                              // Update totalSupply
+        Burn(_from, _value);
+        return true;
+    }
 }
 
-/* »ù±¾ºÏÔ¼ */
-contract token { 
-	
-	string public name; 				// ºÏÔ¼Ãû³Æ
-	string public symbol; 				// ºÏÔ¼Èı¸ö×ÖÄ¸µÄ±ğÃû
-	uint8 public decimals; 				// Ğ¡Êıµã±£ÁôÎ»Êı
-	uint256 public totalSupply;			// ×Ü·¢ĞĞ´ú±ÒÊıÁ¿
-	
-	mapping (address => uint256) public balanceOf;	// µØÖ·ºÍµØÖ·Ëù¾ßÓĞµÄ´ú±ÒÊıÁ¿Êı×é
-  	mapping (address => mapping (address => uint256)) public allowance;
+/******************************************/
+/*       ADVANCED TOKEN STARTS HERE       */
+/******************************************/
+contract MyAdvancedToken is owned, TokenERC20, DeviceFlowRecordContract {
 
-	/* This generates a public event on the blockchain that will notify clients */
-	event Transfer(address indexed from, address indexed to, uint256 value);
+    uint256 public sellPrice;
+    uint256 public buyPrice;
 
-	/* This notifies clients about the amount burnt */
-	event Burn(address indexed from, uint256 value);
+    mapping (address => bool) public frozenAccount;
 
-	/* Initializes contract with initial supply tokens to the creator of the contract */
-	function token(uint256 initialSupply, string tokenName, uint8 decimalUnits, string tokenSymbol) {
-		balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens
-		totalSupply = initialSupply;                        // Update total supply
-		name = tokenName;                                   // Set the name for display purposes
-		symbol = tokenSymbol;                               // Set the symbol for display purposes
-		decimals = decimalUnits;                            // Amount of decimals for display purposes
-	}
+    /* This generates a public event on the blockchain that will notify clients */
+    event FrozenFunds(address target, bool frozen);
 
-	/* ÄÚ²¿×ªÈÃ£¬Ö»ÄÜÓÉ±¾ºÏÔ¼µ÷ÓÃ */
-	function _transfer(address _from, address _to, uint _value) internal {
-		require (_to != 0x0);                               // Prevent transfer to 0x0 address. Use burn() instead
-		require (balanceOf[_from] > _value);                // Check if the sender has enough
-		require (balanceOf[_to] + _value > balanceOf[_to]); // Check for overflows
-		balanceOf[_from] -= _value;                         // Subtract from the sender
-		balanceOf[_to] += _value;                           // Add the same to the recipient
-		Transfer(_from, _to, _value);
-	}
+    /* Initializes contract with initial supply tokens to the creator of the contract */
+    function MyAdvancedToken(
+        uint256 initialSupply,
+        string tokenName,
+        string tokenSymbol
+    ) TokenERC20(initialSupply, tokenName, tokenSymbol) public {}
 
-	/// @notice ´Óµ÷ÓÃÕßµÄµØÖ·Ïò'_to'µØÖ··¢ËÍ´ú±Ò
-	/// @param _to ´ú±Ò½ÓÊÕÕßµØÖ·
-	/// @param _value ·¢ËÍµÄÊıÁ¿
-	function transfer(address _to, uint256 _value) {
-		_transfer(msg.sender, _to, _value);
-	}
-
-	/// @notice Send `_value` tokens to `_to` in behalf of `_from`
-	/// @param _from The address of the sender
-	/// @param _to The address of the recipient
-	/// @param _value the amount to send
-	function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
-		require (_value < allowance[_from][msg.sender]);     // Check allowance
-		allowance[_from][msg.sender] -= _value;
-		_transfer(_from, _to, _value);
-		return true;
-	}
-	
-	/// @notice Send `_value` tokens to `_to` in behalf of `_from`
+    /* Internal transfer, only can be called by this contract */
+    function _transfer(address _from, address _to, uint _value) internal {
+        require (_to != 0x0);                               // Prevent transfer to 0x0 address. Use burn() instead
+        require (balanceOf[_from] > _value);                // Check if the sender has enough
+        require (balanceOf[_to] + _value > balanceOf[_to]); // Check for overflows
+        require(!frozenAccount[_from]);                     // Check if sender is frozen
+        require(!frozenAccount[_to]);                       // Check if recipient is frozen
+        balanceOf[_from] -= _value;                         // Subtract from the sender
+        balanceOf[_to] += _value;                           // Add the same to the recipient
+        Transfer(_from, _to, _value);
+    }
+    
+	/// @notice å……å€¼æ•°å­—èµ„äº§
 	/// @param _from The address of the sender
 	/// @param _to The address of the recipient
 	/// @param _value the amount to send
 	function rechargeDataDictionary(address _from, address _to, uint256 _value) returns (bool success) {
-		// ´ÓÓÃ»§ÕË»§¼õÉÙQLCµ½×ÜÕË»§
+		// ä»ç”¨æˆ·è´¦æˆ·å‡å°‘QLCåˆ°æŒ‡å®šè´¦æˆ·
 		transferFrom(_from, _to, _value);
-		// ÓÃ»§Êı×Ö×Ê²úÔö¼Ó
+		// ç”¨æˆ·æ•°å­—èµ„äº§å¢åŠ 
 		increase(_from, _value);
-		// ¼ÇÂ¼Êı¾İ×Ê²ú½»Ò×¼ÇÂ¼
-   	 	qlcRecord_add(_from, 0, _value, now, "recharg:" + _value);
+		// è®°å½•æ•°å­—èµ„äº§äº¤æ˜“è®°å½•
+   	    szzcRecordAdd(_from, 0, _value, now);
 		return true;
 	}
 
-	/// @notice Allows `_spender` to spend no more than `_value` tokens in your behalf
-	/// @param _spender The address authorized to spend
-	/// @param _value the max amount they can spend
-	function approve(address _spender, uint256 _value) returns (bool success) {
-		allowance[msg.sender][_spender] = _value;
-		return true;
-	}
+    /// @notice Create `mintedAmount` tokens and send it to `target`
+    /// @param target Address to receive the tokens
+    /// @param mintedAmount the amount of tokens it will receive
+    function mintToken(address target, uint256 mintedAmount) onlyOwner public {
+        balanceOf[target] += mintedAmount;
+        totalSupply += mintedAmount;
+        Transfer(0, this, mintedAmount);
+        Transfer(this, target, mintedAmount);
+    }
 
-	/// @notice Allows `_spender` to spend no more than `_value` tokens in your behalf, and then ping the contract about it
-	/// @param _spender The address authorized to spend
-	/// @param _value the max amount they can spend
-	/// @param _extraData some extra information to send to the approved contract
-	function approveAndCall(address _spender, uint256 _value, bytes _extraData)
-		returns (bool success) {
-		tokenRecipient spender = tokenRecipient(_spender);
-		if (approve(_spender, _value)) {
-		  spender.receiveApproval(msg.sender, _value, this, _extraData);
-		  return true;
-		}
-	}        
+    /// @notice `freeze? Prevent | Allow` `target` from sending & receiving tokens
+    /// @param target Address to be frozen
+    /// @param freeze either to freeze it or not
+    function freezeAccount(address target, bool freeze) onlyOwner public {
+        frozenAccount[target] = freeze;
+        FrozenFunds(target, freeze);
+    }
 
-	/// @notice ´ÓºÏÔ¼ËùÓĞÕßµØÖ·ÉÏ¼õÉÙ´ú±Ò·¢ĞĞµÄ×ÜÁ¿
-	/// @param _value ¼õÉÙ´ú±ÒµÄÊıÁ¿
-	function burn(uint256 _value) returns (bool success) {
-		require (balanceOf[msg.sender] > _value);             // ÅĞ¶ÏºÏÔ¼ËùÓĞÕßµÄ´ú±ÒÊıÁ¿ÊÇ·ñ×ã¹»
-		balanceOf[msg.sender] -= _value;                      // ¼õÉÙºÏÔ¼ËùÓĞÕßµÄ´ú±ÒÊıÁ¿
-		totalSupply -= _value;                                // ĞŞ¸ÄºÏÔ¼´ú±Ò×ÜÊı
-		Burn(msg.sender, _value);
-		return true;
-	}
-	
-	/// @notice ´ÓÖ¸¶¨µØÖ·ÉÏ¼õÉÙ´ú±Ò·¢ĞĞµÄ×ÜÁ¿
-	/// @param _from Ö¸¶¨µÄµØÖ·
-	/// @param _value ¼õÉÙ´ú±ÒµÄÊıÁ¿
-	function burnFrom(address _from, uint256 _value) returns (bool success) {
-		require(balanceOf[_from] >= _value);                // ¼ì²éÄ¿±êµØÖ·Óà¶îÊÇ·ñ×ã¹»
-		require(_value <= allowance[_from][msg.sender]);    // Check allowance
-		balanceOf[_from] -= _value;                         // ¼õÉÙÄ¿±êµØÖ·µÄ´ú±ÒÊıÁ¿
-		allowance[_from][msg.sender] -= _value;             // Subtract from the sender's allowance
-		totalSupply -= _value;                              // ĞŞ¸ÄºÏÔ¼´ú±Ò×ÜÊı
-		Burn(_from, _value);
-		return true;
-	}
-}
+    /// @notice Allow users to buy tokens for `newBuyPrice` eth and sell tokens for `newSellPrice` eth
+    /// @param newSellPrice Price the users can sell to the contract
+    /// @param newBuyPrice Price users can buy from the contract
+    function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner public {
+        sellPrice = newSellPrice;
+        buyPrice = newBuyPrice;
+    }
 
-contract MyAdvancedToken is owned, token {
-	
-	uint256 public sellPrice;
-	uint256 public buyPrice;
+    /// @notice Buy tokens from contract by sending ether
+    function buy() payable public {
+        uint amount = msg.value / buyPrice;               // calculates the amount
+        _transfer(this, msg.sender, amount);              // makes the transfers
+    }
 
-	/* ÉêÇëÒ»¸öÊı×é¡°freezeAccount¡±£¬´æ´¢¶³½áÕË»§µÄµØÖ·ºÍ¶³½áĞÅÏ¢ */
-	mapping (address => bool) public frozenAccount;
-
-	/* ÉêÇëÒ»¸öÊÂ¼ş¡°FrozenFunds¡±£¬ÌáĞÑ¿Í»§¶Ë·¢ÉúÁË¶³½á */
-	event FrozenFunds(address target, bool frozen);
-
-	/* Initializes contract with initial supply tokens to the creator of the contract */
-  	function MyAdvancedToken(
-      	uint256 initialSupply,
-      	string tokenName,
-      	uint8 decimalUnits,
-     	string tokenSymbol
-	) token (initialSupply, tokenName, decimalUnits, tokenSymbol) {}
-
-	/* Internal transfer, only can be called by this contract */
-	function _transfer(address _from, address _to, uint _value) internal {
-		require (_to != 0x0);                               // Prevent transfer to 0x0 address. Use burn() instead
-		require (balanceOf[_from] > _value);                // Check if the sender has enough
-		require (balanceOf[_to] + _value > balanceOf[_to]); // Check for overflows
-		require(!frozenAccount[_from]);                     // Check if sender is frozen
-		require(!frozenAccount[_to]);                       // Check if recipient is frozen
-		balanceOf[_from] -= _value;                         // Subtract from the sender
-		balanceOf[_to] += _value;                           // Í¨Öª¿Í»§¶Ë
-		Transfer(_from, _to, _value);
-	}
-
-	/// @notice Create `mintedAmount` tokens and send it to `target`
-	/// @param target Address to receive the tokens
-	/// @param mintedAmount the amount of tokens it will receive
-	function mintToken(address target, uint256 mintedAmount) onlyOwner {
-		balanceOf[target] += mintedAmount;
-		totalSupply += mintedAmount;
-		Transfer(0, this, mintedAmount);
-		Transfer(this, target, mintedAmount);
-	}
-
-	/// @notice `freeze? Prevent | Allow` `target` from sending & receiving tokens
-	/// @param target Address to be frozen
-	/// @param freeze either to freeze it or not(ÉèÖÃ0¼´½âËø)
-	function freezeAccount(address target, bool freeze) onlyOwner {
-		frozenAccount[target] = freeze;
-		FrozenFunds(target, freeze);
-	}
-
-	/// @notice Allow users to buy tokens for `newBuyPrice` eth and sell tokens for `newSellPrice` eth
-	/// @param newSellPrice Price the users can sell to the contract
-	/// @param newBuyPrice Price users can buy from the contract
-	function setPrices(uint256 newSellPrice, uint256 newBuyPrice) onlyOwner {
-		sellPrice = newSellPrice;
-		buyPrice = newBuyPrice;
-	}
-
-	/// @notice Buy tokens from contract by sending ether(ÓÃ»§¹ºÂò´ú±Ò)
-	function buy() payable {
-		uint amount = msg.value / buyPrice;               // valueÊÇÓÃ»§ÊäÈëµÄ¹ºÂò´ú±ÒÖ§¸¶µÄÒÔÌ«±ÒÊıÄ¿£¬amountÊÇ¸ù¾İ»ãÂÊËã³öÀ´µÄ´ú±ÒÊıÄ¿
-		_transfer(this, msg.sender, amount);              // µ÷ÓÃ_transfer·½·¨Ö´ĞĞ½»Ò×
-	}
-
-	/// @notice Sell `amount` tokens to contract(ÓÃ»§ÏòºÏÔ¼³öÊÛ´ú±Ò)
-	/// @param amount amount of tokens to be sold(³öÊÛ´ú±ÒÊıÁ¿)
-	function sell(uint256 amount) {
-		require(this.balance >= amount * sellPrice);      // ÅĞ¶ÏºÏÔ¼ÊÇ·ñÓĞ×ã¹»µÄÒÔÌ«±Ò
-		_transfer(msg.sender, this, amount);              // µ÷ÓÃ_transfer·½·¨Ö´ĞĞ½»Ò×
-		msg.sender.transfer(amount * sellPrice);          // sends ether to the seller. It's important to do this last to avoid recursion attacks
-	}
+    /// @notice Sell `amount` tokens to contract
+    /// @param amount amount of tokens to be sold
+    function sell(uint256 amount) public {
+        require(this.balance >= amount * sellPrice);      // checks if the contract has enough ether to buy
+        _transfer(msg.sender, this, amount);              // makes the transfers
+        msg.sender.transfer(amount * sellPrice);          // sends ether to the seller. It's important to do this last to avoid recursion attacks
+    }
 }
